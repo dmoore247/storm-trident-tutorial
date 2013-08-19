@@ -7,7 +7,6 @@ import backtype.storm.generated.StormTopology;
 import backtype.storm.tuple.Fields;
 import storm.trident.TridentState;
 import storm.trident.TridentTopology;
-import storm.trident.operation.builtin.Debug;
 import storm.trident.operation.builtin.FilterNull;
 import storm.trident.operation.builtin.MapGet;
 import storm.trident.operation.builtin.Sum;
@@ -19,7 +18,8 @@ public class SimpleTridentTopology {
 
     private static final int DRPC_QUERY_ITERATIONS = 2000;
     private static final int DRPC_QUERY_INTERVAL = 200;
-    private static final String DATA_PATH = "../../data/20130301.csv.gz";
+    // Data path relative to pom.xml file.
+    private static final String DATA_PATH = "data/20130301.csv.gz";
     private static final int NUM_WORKERS = 3;
     private static final int LOCAL_DURATION = 20000;
 
@@ -40,7 +40,7 @@ public class SimpleTridentTopology {
         cluster.submitTopology( "symbolCounter", conf, buildTopology( drpc ) );
 
         for (int i = 0; i < DRPC_QUERY_ITERATIONS; i++) {
-            System.err.println( "Result for symbols -> " + drpc.execute( "trades", "INTC GE AAPL" ) );
+            System.err.println( "Result for DRPC stock volume query -> " + drpc.execute( "trades", "INTC GE AAPL" ) );
             Thread.sleep( DRPC_QUERY_INTERVAL );
         }
 
@@ -64,7 +64,7 @@ public class SimpleTridentTopology {
         //
 
                 // Debug output of "quotes" spout
-                .each( new Fields( "date", "symbol", "price", "shares" ), new Debug() )
+                // .each( new Fields( "date", "symbol", "price", "shares" ), new Debug() )
 
                 // -- fields grouping by "symbol"
                 .groupBy( new Fields( "symbol" ) )
@@ -82,13 +82,13 @@ public class SimpleTridentTopology {
 
                 // Freaking awesome DEBUG!!!
                 // This debug statement will emit stock symbols: DEBUG: [INTC GE AAPL]
-                .each( new Fields( "args" ), new Debug() )
+                // .each( new Fields( "args" ), new Debug() )
 
                 // state query. The input is always "args", and needs to be split into individual fields
                 // Split() implements tuple.getString(0).split(" ")
                 .each( new Fields( "args" ), new Split(), new Fields( "symbol" ) )
                 //
-                .each( new Fields( "symbol" ), new Debug() )
+                // .each( new Fields( "symbol" ), new Debug() )
                 //
                 .groupBy( new Fields( "symbol" ) )
 
@@ -102,7 +102,7 @@ public class SimpleTridentTopology {
 
                 //
                 // Debug print symbol and volume values
-                .each( new Fields( "symbol", "volume" ), new Debug() )
+                // .each( new Fields( "symbol", "volume" ), new Debug() )
 
                 //
                 // Project allows us to keep only the interesting fields that interest us
