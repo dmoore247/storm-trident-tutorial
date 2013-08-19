@@ -1,4 +1,4 @@
-![](images/SmallThinkBigIcon.png)
+![](images/logo.png)
 # README for Storm Trident Tutorial
 
 * SimpleTridentTopology - Demonstrate Trident and DRPC.
