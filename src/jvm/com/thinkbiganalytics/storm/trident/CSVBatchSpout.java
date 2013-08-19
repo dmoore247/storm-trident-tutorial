@@ -53,7 +53,8 @@ public class CSVBatchSpout implements IBatchSpout {
         try {
             input = new BufferedReader( new InputStreamReader( new GZIPInputStream( new FileInputStream( filename ) ) ) );
         } catch (Exception e) {
-            System.err.print( e.getStackTrace() );
+            e.printStackTrace();
+            System.exit( -1 );
         }
     }
 
