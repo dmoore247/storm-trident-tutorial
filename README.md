@@ -1,5 +1,5 @@
 ![](images/logo.png)
-# README for Storm Trident Tutorial
+# Storm Trident Tutorial
 This repository contains Storm Trident examples and tutorial material
 ## Topologies
 * SimpleTridentTopology - Demonstrate Trident and DRPC.
