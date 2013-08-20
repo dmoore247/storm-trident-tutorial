@@ -1,3 +1,4 @@
+// Copyright (c) 2013, Think Big Analytics.
 package com.thinkbiganalytics.storm.trident;
 
 import java.io.BufferedReader;
