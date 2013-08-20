@@ -9,6 +9,7 @@ This repository contains Storm Trident examples and tutorial material
 
 * Download from Github
 * mvn eclipse:eclipse
+* mvn package
 * open in eclipse
 ** Import existing Maven project
 * select <....>Topology.java
