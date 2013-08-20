@@ -9,8 +9,16 @@ import com.thinkbiganalytics.storm.pojo.StockStats;
 import storm.trident.operation.CombinerAggregator;
 import storm.trident.tuple.TridentTuple;
 
+/*-
+ * Manage complex stock trade statistics within the Storm Trident framework.
+ * Inputs: symbol, shares, price
+ * Outputs: StockStats
+ */
 public class StockAggregator implements CombinerAggregator<Map<String, StockStats>> {
 
+    /**
+     * Convert the TridentTuple into a map object.
+     */
     @Override
     public Map<String, StockStats> init( TridentTuple tuple ) {
 
@@ -23,6 +31,9 @@ public class StockAggregator implements CombinerAggregator<Map<String, StockStat
         return map;
     }
 
+    /**
+     * Handle hash map based combine logic
+     */
     @Override
     public Map<String, StockStats> combine( Map<String, StockStats> val1, Map<String, StockStats> val2 ) {
         for (Map.Entry<String, StockStats> entry : val2.entrySet()) {
