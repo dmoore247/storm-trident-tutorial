@@ -13,10 +13,6 @@
 	</properties>
 	<repositories>
 		<repository>
-			<id>github-releases</id>
-			<url>http://oss.sonatype.org/content/repositories/github-releases/</url>
-		</repository>
-		<repository>
 			<id>clojars.org</id>
 			<url>http://clojars.org/repo</url>
 		</repository>
@@ -28,11 +24,10 @@
 
 	<dependencies>
 		<dependency>
-	      <groupId>junit</groupId>
-	      <artifactId>junit</artifactId>
-	      <version>4.8.1</version>
-	      <scope>test</scope>
-	    </dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.11</version>
+		</dependency>
 		
 		<dependency>
 			<groupId>org.mockito</groupId>
