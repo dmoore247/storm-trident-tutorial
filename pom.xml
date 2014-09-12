@@ -42,12 +42,13 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-			<groupId>storm</groupId>
-			<artifactId>storm</artifactId>
-			<version>0.8.2</version>
-			<!-- keep storm out of the jar-with-dependencies -->
-			<scope>test</scope>
+			<groupId>org.apache.storm</groupId>
+			<artifactId>storm-core</artifactId>
+			<version>0.9.2-incubating</version>
+				<!-- keep storm out of the jar-with-dependencies -->
+					<scope>test</scope>
 		</dependency>
+		
 		<dependency>
 			<groupId>org.twitter4j</groupId>
 			<artifactId>twitter4j-core</artifactId>
