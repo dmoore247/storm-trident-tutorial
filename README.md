@@ -1,6 +1,7 @@
 # Storm Trident Tutorial ![](images/logo.png)
 This repository contains Storm Trident examples and tutorial material. 
 The [Boston Storm Meetup presentation](/presentations/Boston%20Storm%20Meetup%20-%20Storm%20Trident%20-%20August%202013-v1DM.pptx) is included here too.
+Video of the Meetup presentation: http://vimeo.com/channels/505762/72864166
 ## Topologies
 * SimpleTridentTopology - Demonstrate Trident and DRPC.
 ...
