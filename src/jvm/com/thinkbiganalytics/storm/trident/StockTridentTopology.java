@@ -35,6 +35,7 @@ public class StockTridentTopology {
         LocalCluster cluster = new LocalCluster();
         cluster.submitTopology( "StockTridentTopology", conf, buildTopology( drpc ) );
 
+        // Setup DRPC query to ask for results on just 3 stocks
         final String symbols = "GE INTC AAPL";
         for (int i = 0; i < 2000; i++) {
             System.err.printf( "Result for symbols -> '%s': %s\n", symbols, drpc.execute( "trades", symbols ) );
