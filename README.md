@@ -6,6 +6,11 @@ Video of the Meetup presentation: http://vimeo.com/channels/505762/72864166
 * SimpleTridentTopology - Demonstrate Trident and DRPC.
 ...
 
+## Requirements
+* Java JDK 1.7
+* Eclipse Juno Service Release 2 or better
+* Maven 3.2.3 or better
+
 ## Steps to run
 
 * Download from Github
