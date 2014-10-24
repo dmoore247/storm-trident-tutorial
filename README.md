@@ -4,6 +4,7 @@ This repository contains Storm Trident examples and tutorial material.
 * Video of the Meetup presentation: http://vimeo.com/channels/505762/72864166
 
 ## Topologies
+The sample topologies run in local mode and utilize data files located in the ./data folder. The spouts open the stock price data file and starts reading and injecting the data as tuples into the topology.
 * SimpleTridentTopology - Demonstrate Trident and DRPC.
 ...
 
