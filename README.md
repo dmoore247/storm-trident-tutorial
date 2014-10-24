@@ -1,7 +1,8 @@
-# Storm Trident Tutorial ![](images/logo.png)
+## Storm Trident Tutorial ![](images/logo.png)
 This repository contains Storm Trident examples and tutorial material. 
-The [Boston Storm Meetup presentation](/presentations/Boston%20Storm%20Meetup%20-%20Storm%20Trident%20-%20August%202013-v1DM.pptx) is included here too.
-Video of the Meetup presentation: http://vimeo.com/channels/505762/72864166
+* The [Boston Storm Meetup presentation](/presentations/Boston%20Storm%20Meetup%20-%20Storm%20Trident%20-%20August%202013-v1DM.pptx) is included here too.
+* Video of the Meetup presentation: http://vimeo.com/channels/505762/72864166
+
 ## Topologies
 * SimpleTridentTopology - Demonstrate Trident and DRPC.
 ...
@@ -27,4 +28,4 @@ and this will start the running topology in local mode.
 * Uncomment .each ... Debug() lines one by one
 
 ---
-(c) Copyright, 2011-2013, Think Big Analytics, Inc. All Rights Reserved
+(c) Copyright, 2011-2014, Think Big Analytics, Inc. All Rights Reserved
