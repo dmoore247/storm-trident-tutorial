@@ -68,8 +68,8 @@ public class CSVBatchSpout implements IBatchSpout {
         try {
             for (int i = 0; i < RECORDS_PER_BATCH; i++) {
                 line = input.readLine();
-
                 parseLine( collector, line );
+                
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -85,7 +85,7 @@ public class CSVBatchSpout implements IBatchSpout {
      *            The line to be parsed.
      */
     protected void parseLine( TridentCollector collector, String line ) {
-        if (line != null) {
+        if (line != null && line.length() > 1 && line.charAt(0) != '#') {
             String fields[] = line.split( "," );
 
             Date date;

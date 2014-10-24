@@ -1,4 +1,4 @@
-time,symbol,price,quantity
+#time,symbol,price,quantity
 2013-03-01 09:30:00,INTC,20.8,100
 2013-03-01 09:30:00,AAPL,437.89,100
 2013-03-01 09:30:00,AAPL,438.14,100
